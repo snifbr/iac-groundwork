@@ -37,11 +37,11 @@ jobs:
       - name: Terraform Validate
         id: validate
         run: terraform validate -no-color
-      
+
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@master
         with:
-          project_id: "direct-link-325016"
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
           service_account_key: ${{ secrets.GCP_KEY }}
           export_default_credentials: true
 
