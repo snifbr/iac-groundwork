@@ -19,6 +19,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Echo do felipe
+        run: echo "hello Felipe!"
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
         with:
